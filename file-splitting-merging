@@ -1,0 +1,25 @@
+path = ''
+合并表 = pd.DataFrame() # 生成一个空表
+for 文件名 in os.listdir(path):
+		表格 = pd.read_excel(路径 + 文件名) #表格=pd.read_excel(路径+文件名, None)多个sheet时
+		合并表 = pd.concat([合并表,表格])
+
+合并表.to_excel(path)
+
+path = 'c:/pandas/拆分.xlsx'
+data = pd.read_excel(path)
+分割列 = list(data['部门'].drop_duplicates())
+新数据 = pd.ExcelWriter('c:/孙兴华.xlsx')
+for i in 分割列:
+		数据1 = data[data['部门'] == i]
+		数据1.to_excel(新数据, sheet_name=i)
+新数据.save()
+新数据.close()
+
+path = 'c:/pandas/拆分.xlsx'
+data = pd.read_excel(path)
+分割列 = list(data['部门'].drop_duplicates())
+
+for i in 分割列:
+		数据1 = data[data['部门'] == i]
+		数据1.to_excel('c:/' + i + '.xlsx')
