@@ -48,15 +48,15 @@ r = re.sub('FBI','BBQ',a) # 把FBI替换成BBQ
 r = re.sub('FBI','BBQ',a,1) # 1表示只替换一次，默认为0（替换所有）
 
 def 函数名(形参):
-		pass
+    pass
 r = re.sub('FBI',函数名,a,1) # 函数名返回空，则相当于把FBI消除
 
 def 函数名(形参):
-		分段获取 = 形参.group()
-		if int(分段获取) >= 5:
-				return '9'
-		else:
-				return '0'
+    分段获取 = 形参.group()
+    if int(分段获取) >= 5:
+       return '9'
+    else:
+       return '0'
 
 r = re.sub('\d',函数名,a)
 
