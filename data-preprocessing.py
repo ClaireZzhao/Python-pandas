@@ -20,3 +20,6 @@ dataframe.drop_duplicates(subset=['姓名'], keep='first/last'/false)
 
 重复 = data.duplicated(subset='姓名')
 data[重复]
+
+# 数据转置
+data2 = data.DataFrame(data.values.T, index = data.columns, columns = data.index)
